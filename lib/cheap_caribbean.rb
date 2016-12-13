@@ -1,5 +1,8 @@
-require "cheap_caribbean/version"
+require 'open-uri'
+require 'pry'
+require 'nokogiri'
 
-module CheapCaribbean
-  # Your code goes here...
-end
+
+require_relative "cheap_caribbean/version"
+require_relative "cheap_caribbean/cli"
+require_relative "cheap_caribbean/deals"
