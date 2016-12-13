@@ -6,7 +6,7 @@ class CheapCaribbean::CLI
       goodbye
     end
 
-#puts travel deals for user to view
+#the list_deals method will put the travel deals to the console for user to view in numericle order
     def list_deals
       puts " "
       puts "********** AFFORDABLE TRAVEL DEALS. BOOK NOW! **********"
@@ -14,12 +14,10 @@ class CheapCaribbean::CLI
       CheapCaribbean::Deal.each_with_index(1) do |deal, i|
         puts "#{i}. #{deal.name}"
     end
-  end 
+  end
 
     def menu
-    end
-
-    def goodbye
+      
     end
 
   end
