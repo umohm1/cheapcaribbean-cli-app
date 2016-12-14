@@ -40,5 +40,9 @@ class CheapCaribbean::CLI
     def goodbye
       puts "Don't forget to come back for more deals!"
     end
+    
+    def display_details(deal)
+        puts '{#deal.details}
+    end 
 
 end
