@@ -13,7 +13,8 @@
    end
 
    def self.scrape_cheap_caribbean
-     doc = 
+     doc = Nokogiri::HTML(open('http://www.cheapcaribbean.com/'))
+
    end
 
    end
