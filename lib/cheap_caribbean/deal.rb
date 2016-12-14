@@ -1,0 +1,2 @@
+class CheapCaribbean::Deal
+end
