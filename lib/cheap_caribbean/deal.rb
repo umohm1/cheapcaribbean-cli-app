@@ -8,6 +8,7 @@ class CheapCaribbean::Deal
     @location = location 
     @description = description
     @url = url 
+    scrape_details
   
   
 end
