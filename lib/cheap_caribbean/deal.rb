@@ -1,14 +1,19 @@
-class CheapCaribbean::Deal
+  class CheapCaribbean::Deal
 
-  attr_accessors :name, :location, :description, :url
+    attr_accessors :name, :location, :description, :url
 
- @@all = []
+   @@all = []
 
- def initialize(name = " ", location = " ")
-   @name = name
-   @location = location
-   @description = description
-   @url = url
-   scrape_details
-   
-end
+   def initialize(name = " ", location = " ")
+     @name = name
+     @location = location
+     @description = description
+     @url = url
+     scrape_details
+   end
+
+   def self.scrape_cheap_caribbean
+     doc = 
+   end
+
+   end
