@@ -3,5 +3,11 @@ class CheapCaribbean::Deal
   
   @@all = []
   
+  def initialize(name = " ", location = " ")
+    @name = name 
+    @location = location 
+    @description = description
+    @url = url 
+  
   
 end
