@@ -25,7 +25,7 @@ class CheapCaribbean::CLI
        puts ""
        input = gets.strip.downcase
        if input.to_i > 0 && input.to_i < 8 # look for input between 1-7
-         deal = CheapCaribbean::Deal.select_deal(input.to_i)
+         deal = CheapCaribbean::Deal.pick_deal(input.to_i)
          display_details(deal)
        elsif input == "list"
          list_deal
@@ -35,6 +35,10 @@ class CheapCaribbean::CLI
          puts "Please input a number between 1-7"
       end
     end
-  end     #not sure how mNy ends I should have.
+  end     #not sure how many ends I should have.
+
+    def goodbye
+      puts "Don't forget to come back for more deals!"
+    end
 
 end
