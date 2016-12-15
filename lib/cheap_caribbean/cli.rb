@@ -42,5 +42,11 @@ class CheapCaribbean::CLI
     end
 
     def display_details(deal)
+<<<<<<< HEAD
     end
+=======
+        puts '{#deal.details}
+    end
+
+>>>>>>> 96eaabda6c00a75e1f577f15e7491445e15fe4fe
 end
