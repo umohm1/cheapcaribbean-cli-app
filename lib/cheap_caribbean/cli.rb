@@ -24,7 +24,7 @@ class CheapCaribbean::CLI
        puts "Enter 'list' to view the deals again or 'exit' to exit the program"
        puts ""
        input = gets.strip.downcase
-       if input.to_i > 0 && input.to_i < 8 # look for input between 1-7
+       if input.to_i > 0 && input.to_i < 6 # look for input between 1-5
          deal = CheapCaribbean::Deal.pick_deal(input.to_i)
          display_details(deal)
        elsif input == "list"
@@ -41,4 +41,6 @@ class CheapCaribbean::CLI
       puts "Don't forget to come back for more deals!"
     end
 
+    def display_details(deal)
+    end
 end
