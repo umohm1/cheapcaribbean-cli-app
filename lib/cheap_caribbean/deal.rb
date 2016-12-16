@@ -1,16 +1,8 @@
-require 'nokogiri'
-require 'open-uri'
-
-module CheapCaribbean
-end
-
 class CheapCaribbean::Deal
 
   attr_accessor :name, :destination, :description, :price 
 
-  @@all = []
-
-  def initialize(name = " ", location = " ")
+  def initialize(name = " ", destination = " ")
     @name = name
     @destination = destination
     @description = description
@@ -22,7 +14,12 @@ class CheapCaribbean::Deal
     puts " "
   end
 
+  def self.all
+    @@all ||= scrape
+  end
+
   def self.scrape
+    deals_list = []
     content = open("http://www.cheapcaribbean.com/").read
     doc = Nokogiri::HTML(content)
     doc.css("div.content.oneColumn.mobileHomeDeal").each do |deal|
@@ -33,13 +30,8 @@ class CheapCaribbean::Deal
       description_url = "http://www.cheapcaribbean.com#{description_link}"
       new_deal.description = open(description_url).read.to_s.strip
       new_deal.price = deal.css('.estPrice.price.bold.taPriceDiv').text.to_s.strip
-      @@all << new_deal
+      deals_list << new_deal
     end
-    @@all
+    deals_list
   end
-end
-
-deals = CheapCaribbean::Deal.scrape
-deals.each_with_index do |deal, index|
-  puts "#{index+1}. #{deal.name}" 
 end
