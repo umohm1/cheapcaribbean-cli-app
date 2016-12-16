@@ -15,10 +15,15 @@ class CheapCaribbean::Deal
 
   def self.scrape
     binding.pry
-    doc = Nokogiri::HTML(open('http://www.cheapcaribbean.com/'))
-    #doc.css("div.content.oneColumn.mobileHomeDeal").each do |deal|
-    name = doc.css("h2").text
-    #doc.css("h2 [itemprop='name']")
-
+    content = open('http://www.cheapcaribbean.com/’).read
+    doc = Nokogiri::HTML(content)
+    doc.css("div.content.oneColumn.mobileHomeDeal").each do |deal|
+      name = deal.css('h2').text.to_s.strip
+      destination = deal.css('a[gatrackitem=DestinationURL]').text
+      description = deal.css()
+      puts "#{name} - #{destination}"
+    end
   end
+end
+
 end
