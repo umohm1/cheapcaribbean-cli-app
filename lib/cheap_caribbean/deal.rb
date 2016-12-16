@@ -1,11 +1,11 @@
 class CheapCaribbean::Deal
 
-  attr_accessor :resort, :destination, :description, :price, :url
+  attr_accessor :name, :destination, :description, :price, :url
 
   @@all = []
 
   def initialize(name = " ", location = " ")
-    @resort = resort
+    @name = name
     @destination = destination
     @description = description
     @price = price
@@ -13,9 +13,12 @@ class CheapCaribbean::Deal
     scrape_details
   end
 
-  def self.scrape_cheap_caribbean
+  def self.scrape
     binding.pry
     doc = Nokogiri::HTML(open('http://www.cheapcaribbean.com/'))
-    doc.css(".content.oneColumn.mobileHomeDeal[garesort]").first
+    #doc.css("div.content.oneColumn.mobileHomeDeal").each do |deal|
+    name = doc.css("h2").text
+    #doc.css("h2 [itemprop='name']")
+
   end
 end
