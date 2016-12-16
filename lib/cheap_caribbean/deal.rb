@@ -1,12 +1,12 @@
 class CheapCaribbean::Deal
 
-  attr_accessor :name, :location, :description, :price, :url
+  attr_accessor :resort, :destination, :description, :price, :url
 
   @@all = []
 
   def initialize(name = " ", location = " ")
-    @name = name
-    @location = location
+    @resort = resort
+    @destination = destination
     @description = description
     @price = price
     @url = url
