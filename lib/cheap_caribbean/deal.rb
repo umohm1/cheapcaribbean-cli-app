@@ -20,8 +20,9 @@ class CheapCaribbean::Deal
     doc.css("div.content.oneColumn.mobileHomeDeal").each do |deal|
       name = deal.css('h2').text.to_s.strip
       destination = deal.css('a[gatrackitem=DestinationURL]').text
-      description = deal.css()
-      puts "#{name} - #{destination}"
+      description = deal.css('.mobileTallAdDesc').text
+      price = 
+      puts "#{name} - #{destination} - #{description}"
     end
   end
 end
