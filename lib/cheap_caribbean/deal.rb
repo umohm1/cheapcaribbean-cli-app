@@ -16,6 +16,6 @@ class CheapCaribbean::Deal
   def self.scrape_cheap_caribbean
     binding.pry
     doc = Nokogiri::HTML(open('http://www.cheapcaribbean.com/'))
-
+    doc.css(".content.oneColumn.mobileHomeDeal[garesort]").first
   end
 end
