@@ -42,7 +42,6 @@ class CheapCaribbean::CLI
     end
 
     def display_details(deal)
-        puts '{#deal.details}
+      puts '{#deal.details}'
     end
-
-end
+  end
