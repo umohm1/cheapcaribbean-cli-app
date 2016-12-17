@@ -9,12 +9,15 @@ class CheapCaribbean::Deal
     @price = price
   end
 
-  def to_s
+  def displaydeal
     puts "#{name} - #{destination} - #{description} - #{price}"
-    puts " "
   end
 
   def self.all
+    # if @@all.nil?
+    #   @@all = scrape
+    # end
+    # return @@all
     @@all ||= scrape
   end
 
@@ -33,5 +36,9 @@ class CheapCaribbean::Deal
       deals_list << new_deal
     end
     deals_list
+  end
+  
+  def self.pick_deal(input)
+    all[input]
   end
 end
