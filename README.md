@@ -1,7 +1,7 @@
 # CheapCaribbean
 
 On average, more than 8 million people fly every single day. In a year, that total well surpasses 1 billion. While reasons for flying can vary, one reason
-that is most prevalent is vacations. Going on vacation allows us to unwind and relax with the most beautiful scenaries and temperatures. One drawback of 
+that is most prevalent are vacations. Going on vacation allows us to unwind and relax with the most beautiful scenaries and temperatures. One drawback of 
 traveling is the cost. If someone decides that they can not go on vacation the number 1 reason is money. With CheapCaribbean, finding lavish affordable 
 vacations is as easy as picking a number. 
 
