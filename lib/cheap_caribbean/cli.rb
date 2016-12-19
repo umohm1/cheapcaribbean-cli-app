@@ -1,4 +1,6 @@
 class CheapCaribbean::CLI
+  
+  
   def call
     list_deals
     menu
