@@ -14,10 +14,6 @@ class CheapCaribbean::Deal
   end
 
   def self.all
-    # if @@all.nil?
-    #   @@all = scrape
-    # end
-    # return @@all
     @@all ||= scrape
   end
 

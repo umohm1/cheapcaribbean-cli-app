@@ -7,8 +7,7 @@ class CheapCaribbean::CLI
 
   private
 
-  # the list_deals method will put the travel deals to the console for user
-  # to view in numericle order
+  
   def list_deal
     puts ""
     puts "********** AFFORDABLE TRAVEL DEALS. BOOK NOW! **********"
@@ -31,8 +30,8 @@ class CheapCaribbean::CLI
         display_details(deal)
       elsif input == "list"
         list_deal
-      else
-        puts "Please input a number between 1-6 or exit or list"
+      else 
+        puts "Please input a number between 1-6, exit or list"
       end
     end
   end
