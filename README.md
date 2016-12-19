@@ -1,28 +1,16 @@
 # CheapCaribbean
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cheap_caribbean`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+On average, more than 8 million people fly every single day. In a year, that total well surpasses 1 billion. While reasons for flying can vary, one reason
+that is most prevalent is vacations. Going on vacation allows us to unwind and relax with the most beautiful scenaries and temperatures. One drawback of 
+traveling is the cost. If someone decides that they can not go on vacation the number 1 reason is money. With CheapCaribbean, finding lavish affordable 
+vacations is as easy as picking a number. 
 
 ## Installation
 
-Add this line to your application's Gemfile:
+1. Please type gem install cheap_caribbean into the terminal. The cheap_caribbean Command Line Interface will be installed.
+2. To run gem type cheap-caribbean and hit enter.
+3. A menu will show and you will be able to learn more about each vacation listing.
 
-```ruby
-gem 'cheap_caribbean'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install cheap_caribbean
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Development
 
