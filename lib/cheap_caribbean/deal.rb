@@ -1,3 +1,7 @@
+require 'pry'
+require 'nokogiri'
+require 'open-uri'
+
 class CheapCaribbean::Deal
 
   attr_accessor :name, :destination, :description, :price, :url
@@ -14,17 +18,15 @@ class CheapCaribbean::Deal
   end
 
   def self.scrape
-    binding.pry
-    content = open('http://www.cheapcaribbean.com/’).read
+    content = open("http://www.cheapcaribbean.com/").read
     doc = Nokogiri::HTML(content)
     doc.css("div.content.oneColumn.mobileHomeDeal").each do |deal|
       name = deal.css('h2').text.to_s.strip
       destination = deal.css('a[gatrackitem=DestinationURL]').text
-      description = deal.css('.mobileTallAdDesc').text
-      price = 
-      puts "#{name} - #{destination} - #{description}"
+      description = deal.css('span.secondaryLink>a').text
+      price = deal.css('.estPrice.price.bold.taPriceDiv').text
+      puts "#{name} - #{destination} - #{description} - #{price}"
+      binding.pry
     end
   end
-end
-
 end
