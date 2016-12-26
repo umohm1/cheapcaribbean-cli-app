@@ -31,7 +31,7 @@ class CheapCaribbean::CLI
         display_details(deal)
     elsif input == "list"
         list_deals
-    else 
+    elsif input != 'exit'
         puts "Please input a number between 1-6, exit or list"
       end
     end
