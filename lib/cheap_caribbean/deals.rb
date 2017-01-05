@@ -1,22 +1,26 @@
 class CheapCaribbean::Deal
 
   attr_accessor :name, :destination, :description, :price 
+  
+  @@all = []
 
   def initialize(name = " ", destination = " ")
     @name = name
     @destination = destination
     @description = description
     @price = price
+    @@all << self
   end
 
-  def displaydeal
-    puts "#{name} - #{destination} - #{description} - #{price}"
-  end
+#  def displaydeal
+ #   puts "#{name} - #{destination} - #{description} - #{price}"
+  #end
 
   def self.all
-    @@all ||= scrape
+    @@all
   end
 
+=begin
   def self.scrape
     deals_list = []
     content = open("http://www.cheapcaribbean.com/").read
@@ -32,7 +36,7 @@ class CheapCaribbean::Deal
       deals_list << new_deal
     end
     deals_list
-  end
+=end
   
   def self.pick_deal(input)
     all[input]

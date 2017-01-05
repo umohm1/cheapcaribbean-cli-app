@@ -2,6 +2,7 @@ class CheapCaribbean::CLI
   
   
   def call
+    CheapCaribbean::Scraper.scrape_deals
     list_deals
     menu
     goodbye
@@ -32,7 +33,7 @@ class CheapCaribbean::CLI
     elsif input == "list"
         list_deals
     elsif input != 'exit'
-        puts "Please input a number between 1-6, exit or list"
+        puts "Please input a number between 1-#{CheapCaribbean::Deal.all.size}, exit or list"
       end
     end
   end
